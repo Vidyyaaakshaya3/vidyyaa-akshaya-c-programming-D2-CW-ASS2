@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<limits.h>
+int main()
+{
+
+    printf("Enter the size of the array:");
+    int size;
+    scanf("%d",&size);
+    int arr[size],i=0,max=INT_MIN,j=0;
+    printf("Enter the Element of the array:\n");
+     while(j<size)
+    {
+        scanf("%d",&arr[j]);
+        j++;
+    }
+    while(i<size)
+    {
+        if(arr[i]>=max)
+        max=arr[i];
+        i++;
+
+    }
+    printf("The largest element of array: %d",max);
+}
