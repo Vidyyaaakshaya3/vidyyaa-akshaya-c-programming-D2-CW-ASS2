@@ -1,0 +1,38 @@
+#include<stdio.h>
+int main()
+{
+    int size;
+    printf("Enter size of the array:");
+    scanf("%d",&size);
+    int arr[size],i;
+    printf("Enter the element of the array:");
+    for(i=0;i<size;i++)
+        scanf("%d",&arr[i]);
+    printf("Enter the search element:");
+    int search_elm;
+    scanf("%d",&search_elm);
+    int found=0;
+    
+ int lowerBound = 0;
+ int upperBound = size-1;
+ int mid;
+do{
+mid = (lowerBound + upperBound ) / 2;
+if(arr[mid]==search_elm)
+found=1;
+else if(lowerBound > upperBound)
+found=1;
+else
+{
+if(arr[mid] < search_elm)
+lowerBound = mid + 1;
+else
+upperBound = mid - 1;
+}
+}while(search_elm!=arr[mid] && lowerBound<=upperBound);
+
+    if(found==1)
+        printf("search element is found.");
+    else
+        printf("search element is not found.");
+}
