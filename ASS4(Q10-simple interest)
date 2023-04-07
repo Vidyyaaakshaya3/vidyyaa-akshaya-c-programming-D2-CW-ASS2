@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    double principle,rate,time,simple_interest;
+    printf("Enter the Principle:");
+    scanf("%lf",&principle);
+
+    printf("Enter the Rate:");
+    scanf("%lf",&rate);
+
+    printf("Enter the Time(year):");
+    scanf("%lf",&time);
+
+    simple_interest=(principle*rate*time)/100.0;
+
+    printf("The Simple Interest: %lf",simple_interest);
+}
