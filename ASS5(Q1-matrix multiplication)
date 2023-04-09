@@ -1,0 +1,61 @@
+include<stdio.h>
+int main()
+{
+
+    int row_size,col_size;
+    //Get size of matrix
+    printf("Enter the row Size Of the Matrix:");
+    scanf("%d",&row_size);
+    printf("Enter the columns Size Of the Matrix:");
+    scanf("%d",&col_size);
+
+    int matrix[row_size][col_size];
+
+    //Taking input of the 1st matrix
+    int i,j;
+    printf("Enter the 1st Matrix Element:\n");
+    for(i=0;i<row_size;i++)
+    {
+        for(j=0;j<col_size;j++)
+        {
+            scanf("%d",&matrix[i][j]);
+        }
+    }
+
+    int matrix1[row_size][col_size];
+
+    //Taking input of the 2nd matrix
+    printf("Enter the 2nd Matrix Element:\n");
+    for(i=0;i<row_size;i++)
+    {
+        for(j=0;j<col_size;j++)
+        {
+            scanf("%d",&matrix1[i][j]);
+}
+    }
+
+    int mul_matrix[row_size][col_size],k,sum=0;
+
+    //Compute Multiplication of two matrices
+    for(i=0;i<row_size;i++)
+    {
+        for(j=0;j<col_size;j++)
+        {
+         for ( k = 0 ; k < row_size; k ++ ) {
+                 sum+= matrix[i][k] * matrix1[k][j];
+            }
+            mul_matrix[i][j]=sum;
+        }
+    }
+
+    //display the Multiplication of two matrices
+    printf("Multiplication of the two Matrices is:\n");
+    for(i=0;i<row_size;i++)
+    {
+        for(j=0;j<col_size;j++)
+        {
+            printf("%d ",mul_matrix[i][j]);
+        }
+        printf("\n");
+    }
+}
