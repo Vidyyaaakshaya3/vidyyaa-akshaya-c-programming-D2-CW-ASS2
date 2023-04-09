@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    int n,i=1,a=0,b=1;
+    printf("Enter the range of number(Limit):");
+    scanf("%d",&n);
+    int c=a+b;
+    while(i<=n)
+    {
+     printf("%d ",c);
+     c=a+b;
+     a=b;
+     b=c;
+     i++;
+    }
+}
